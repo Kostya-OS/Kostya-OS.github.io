@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostya OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="MS-DOS_Application_24765.ico" type="image/x-icon">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        </style>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+            }
+            #dos {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+                border: 1px solid black;
+            }
+            #dosup {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+            }
+            input {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                cursor: url('input2.png'), auto;
+                border: 0ch solid black; 
+            }
+            input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 1; /* Firefox */
+            }
+
+            input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: white;
+            }
+
+            input::-ms-input-placeholder { /* Microsoft Edge */
+                color: white;
+            }
+
+            input:focus {
+                border: 0ch solid black;
+            }
+            #dosdown {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {font-size: 3em;}
+            ::-webkit-scrollbar {width: 1px;}
+            a {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+                }
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: black;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: black;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: black;
+            }
+            body, #dosup, #dos, #dosdown {
+                cursor: url('qwerty.png'), auto;	
+            }
+            h6 {
+                font-size: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="dos"><h1>Костина операционная система</h1></button>
+        <div id="dosup"></div>
+        <div id="dosdown">
+           
+            <input id='input' type="text" placeholder="Команда">
+            <br>
+            <input id='input1' type="text" placeholder="Первый атрибут">  
+            <br>
+            <input id='input2' type="text" placeholder="Второй атрибут">  
+            <br>
+            <input id='input3' type="text" placeholder="Третий атрибут">
+        </div>
+        <script>
+            let inputon = false
+            let textik = ''
+            let dosik = document.querySelector('#dos')
+            let input = document.querySelector('#input')
+            let input1 = document.querySelector('#input1')
+            let input2 = document.querySelector('#input2')
+            let input3 = document.querySelector('#input3')
+            let dosup = document.querySelector('#dosup')
+            let dosdown = document.querySelector('#dosdown')
+            let name = 'no name'
+            let text = 'no text'
+            dosik.addEventListener('click', dos)
+            document.addEventListener('keydown', dos1)
+            function dos1() {
+                if (event.keyCode == 13) {dos()}
+            }
+                function dos() {
+                    if (input.value.toLowerCase() == 'помощь') {
+                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Команда: создатьТекстовыйФайл <br> Первый атрибут: имя <br> Второй атрибут: текст <br> Это нужно для: создания текстового файла <br><br> Команда: увидетьТекстовыйФайл <br>Это нужно для: просмотра текстового файла <br><br>Команда: ссылки <br> Это нужно для: связи со мной <br><br> Команда: куб <br> Первый атрибут: число <br> Это для: возведения числа в куб <br><br> Команда: квадрат <br> Первый атрибут: число <br> Это нужно для: возведения числа в квадрат <br><br> Команда: степень <br> Первый атрибут: число <br> Второй атрибут: степень <br> Это нужно для: увеличения числа в степень<br><br> Команда: калькулятор <br> Первый атрибут: число <br> Второй атрибут: +, -, *, или / <br> Третий атрибут: число <br> Это нужно для: подсчета <br><br> Команда: стереть <br> Это нужно для: стирания текста в Костиной ОС <br><br> Команда: костинаос, костина-ос, информация <br> Это нужно для: Узнавания версии ОС <br><br> Команда: язык <br> Это нужно для: изменения языка в ОС (Английская версия более продвинутая, <a href='kostya-os.ru'>Она здесь.</a>) <br><br><h6>загрузиться<h6><br><br> ";
+                    input.value = ''
+                    }
+                    else if (input.value.toLowerCase() == 'создатьтекстовыйфайл') {
+                        name = input1.value
+                        text = input2.value
+                        input.value = ''
+                        input1.value = ''
+                        input2.value = ''
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + name + '<br>' + text;
+                    }
+                    else if (input.value.toLowerCase() == 'увидетьтекстовыйфайл'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + name + '<br>текст: ' + text;    
+                    
+                    }
+                    else if (input.value.toLowerCase() == 'костинаос' || input.value.toLowerCase() == 'костина-ос' || input.value.toLowerCase() == 'информация'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Костина ОС (c) 2020 - 2021 Костина ОС'
+                    }
+                    else if (input.value.toLowerCase() == 'язык'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Это русская версия. Здесь есть: <a href="https://kostya-os.ru">English version</a>'
+                    }
+                    else if (input.value.toLowerCase() == 'куб'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value * input1.value)
+                    }
+                    else if (input.value.toLowerCase() == 'квадрат'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value)
+                    }
+                    else if (input.value.toLowerCase() == 'степень'){
+                        let exp = input1.value
+                        for (let i = 1; i < input2.value; i++) {
+                            exp = exp * input1.value
+                        }
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + exp;    
+                    }
+                    else if (input.value.toLowerCase() == 'ссылки'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  "Привет, я Костя, и это ссылки по которым :<br><a href='https://vk.com/kostyaos'>Моя группа ВК</a><br><a href='tel:89257929718'>My phone number</a><br><a href='mailto:holojva@gmail.com'>My Email</a>"
+                    }
+                    
+                    else if (input.value.toLowerCase() == 'калькулятор'){
+                        if (input2.value == '*') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) * Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                            input3.value = ''
+                        }
+                        if (input2.value == '+') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) + Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                        }
+                        if (input2.value == '-') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) - Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                        }
+                        if (input2.value == '/') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) / Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                        }
+                    }
+                
+                    else if (input.value.toLowerCase() == 'загрузиться'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Как я загружусь в браузере?! <br> Где твои мозги?!'
+                    }
+                    else if (input.value.toLowerCase() == 'стереть'){
+                        dosup.innerHTML = ''
+                    }
+                    else {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Что ты сказал?'
+                        inputon = true 
+                    }
+                    if (inputon === false) {
+                        input.value = ''
+                        input1.value = ''
+                        input2.value = ''
+                        input3.value = ''   
+                    }
+                    else {
+                        inputon = false
+                    }
+                
+                }
+        </script>
+    </body>
+</html>
