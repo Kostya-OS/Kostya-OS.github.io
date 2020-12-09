@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MHR5HJWN4"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(70238734, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/70238734" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kostya OS</title>
@@ -133,7 +149,7 @@
             }
                 function dos() {
                     if (input.value.toLowerCase() == 'help') {
-                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='kostya-os.ru'>here it is.</a>) <br><br><h6>boot<h6><br><br> ";
+                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br>Command: versions <br> If you dont like new versions, you can use old <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='kostya-os.ru'>here it is.</a>) <br><br><h6>boot<h6><br><br> ";
                     input.value = ''
                     }
                     else if (input.value.toLowerCase() == 'createtextfile') {
@@ -178,7 +194,7 @@
                     
                     }
                     else if (input.value.toLowerCase() == 'versions') {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'I have this versions:  <a href="https://kostya-os.ru/v2_2.html">version 2.2</a>'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'I have this versions:  <a href="https://kostya-os.ru/v2_2.html">version 2.2</a> <a href="https://kostya-os.ru/v2_3.html">version 2.3</a> <a href="https://kostya-os.ru">newest version 2.4</a> '
                     }
                     else if (input.value.toLowerCase() == 'deletetext'){
                         if (input1.value == namef) {

@@ -78,7 +78,7 @@
                 margin: 0;
                 padding: 0;
             }
-            h1 {font-size: 3em;}
+            h1 {font-size: 5em;}
             ::-webkit-scrollbar {width: 1px;}
             a {
                 background-color: black;
@@ -110,18 +110,18 @@
         </style>
     </head>
     <body>
-        <button id="dos"><h1>Костина операционная система 2.4
-        </h1></button>
+        <button id="dos"><h1>KOSTYA OS 2.3</h1></button>
         <div id="dosup"></div>
         <div id="dosdown">
-          
-            <input id='input' type="text" placeholder="Команда">
+           
+            <input id='input' type="text" placeholder="COMMAND">
             <br>
-            <input id='input1' type="text" placeholder="Первый атрибут">  
+            <input id='input1' type="text" placeholder="FIRST ATTRIBUTE">  
             <br>
-            <input id='input2' type="text" placeholder="Второй атрибут">  
+            <input id='input2' type="text" placeholder="SECOND ATTRIBUTE">  
             <br>
-            <input id='input3' type="text" placeholder="Третий атрибут">
+            <input id='input3' type="text" placeholder="THIRD ATTRIBUTE">
+           
         </div>
         <script>
             let inputon = false
@@ -141,28 +141,17 @@
             let textt = 'no text'
             let hmtxt = 0
             let alltxtcrt = false
-            document.addEventListener("mousemove", go)
-            function go() {
-                document.getElementById("my_audio").play();
-                console.log('qwerty1')
-                setTimeout(func, 2000)
-               
-            }
-            function func() {
-                document.removeEventListener("mousemove", go);
-                console.log('qwerty2')
-            }
             dosik.addEventListener('click', dos)
             document.addEventListener('keydown', dos1)
             function dos1() {
                 if (event.keyCode == 13) {dos()}
             }
                 function dos() {
-                    if (input.value.toLowerCase() == 'помощь') {
-                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Команда: создатьТекстовыйФайл <br> Первый атрибут: имя <br> Второй атрибут: текст <br> Это нужно для: создания текстового файла <br><br>Команда: версия <br> Если вам не нравится новые версии, вы можете использовать старые<br><br> Команда: увидетьТекстовыйФайл <br> Первый атрибут: имя текстового файла <br> Это нужно для: просмотра текстового файла <br><br>Команда: ссылки <br> Это нужно для: связи со мной <br><br>Команда: удалитьТекст <br> Первый атрибут: имя файла <br>Это нужно для: удаления текстового файла <br><br> Команда: куб <br> Первый атрибут: число <br> Это для: возведения числа в куб <br><br> Команда: квадрат <br> Первый атрибут: число <br> Это нужно для: возведения числа в квадрат <br><br> Команда: степень <br> Первый атрибут: число <br> Второй атрибут: степень <br> Это нужно для: увеличения числа в степень<br><br> Команда: калькулятор <br> Первый атрибут: число <br> Второй атрибут: +, -, *, или / <br> Третий атрибут: число <br> Это нужно для: подсчета <br><br> Команда: стереть <br> Это нужно для: стирания текста в Костиной ОС <br><br> Команда: костинаос, костина-ос, информация <br> Это нужно для: Узнавания версии ОС <br><br> Команда: язык <br> Это нужно для: изменения языка в ОС (Английская версия более продвинутая, <a href='kostya-os.ru'>Она здесь.</a>) <br><br><h6>загрузиться<h6><br><br> ";
+                    if (input.value.toLowerCase() == 'help') {
+                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br>Command: versions <br> If you dont like new versions, you can use old <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='kostya-os.ru'>here it is.</a>) <br><br><h6>boot<h6><br><br> ";
                     input.value = ''
                     }
-                    else if (input.value.toLowerCase() == 'создатьтекстовыйфайл') {
+                    else if (input.value.toLowerCase() == 'createtextfile') {
                         if (hmtxt === 0) {
                             namef = input1.value
                             textf = input2.value
@@ -185,29 +174,28 @@
                                 hmtxt = 3
                             }
                         } else if (hmtxt == 3){
-                            dosup.innerHTML = dosup.innerHTML + '<br>' + 'У вас слишком много текстов. Удалите один командой "удалитьТекст" '
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + 'You have too much texts, delete one.'
                         }
                         
                         input.value = ''
                         input1.value = ''
                         input2.value = ''
                     }
-                    else if (input.value == 'версии'){
-                            dosup.innerHTML = dosup.innerHTML + '<br>' +  "Вот все версии:  <a href='https://kostya-os.ru/v2_2.html'>версия 2.2</a> <a href='https://kostya-os.ru/v2_3.html'>версия 2.3</a> <a href='https://kostya-os.ru/v2_4.html'>новейшая версия 2.4</a> <a href='discrette.zip' download>Дискретная версия для дисков</a>"
-                        }
-                    else if (input.value.toLowerCase() == 'увидетьтекстовыйфайл'){
-                       if (input1.value == namef) {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + namef + '<br>текст: ' + textf; 
+                    else if (input.value.toLowerCase() == 'seetextfile'){
+                        if (input1.value == namef) {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'name: ' + namef + '<br>text: ' + textf; 
                        }else if (input1.value == names) {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + names + '<br>текст: ' + texts; 
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'name: ' + names + '<br>text: ' + texts; 
                        }else if (input1.value == namet) {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + namet + '<br>текст: ' + textt; 
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'name: ' + namet + '<br>text: ' + textt; 
                        }
-
-
+   
                     
-                    }  
-                    else if (input.value.toLowerCase() == 'удалитьтекст'){
+                    }
+                    else if (input.value.toLowerCase() == 'versions') {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'I have this versions:  <a href="https://kostya-os.ru/v2_2.html">version 2.2</a> <a href="https://kostya-os.ru/v2_3.html">version 2.3</a>  <a href="https://kostya-os.ru">newest version 2.4</a> <a href="discrette.zip" download>Discrette version for discs.</a>'
+                    }
+                    else if (input.value.toLowerCase() == 'deletetext'){
                         if (input1.value == namef) {
                             namef = ''
                             textf = ''
@@ -224,33 +212,33 @@
                             hmtxt = 2
                             alltxtcrt = true
                         } else {
-                            dosup.innerHTML = dosup.innerHTML + '<br>' + 'Нет такого текста'
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + 'I dont have this text'
                         }
                     }
-                    else if (input.value.toLowerCase() == 'костинаос' || input.value.toLowerCase() == 'костина-ос' || input.value.toLowerCase() == 'информация'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Костина ОС 2.4 (c) 2020 - 2021 Костина ОС'
+                    else if (input.value.toLowerCase() == 'kostyaos' || input.value.toLowerCase() == 'kostya-os' || input.value.toLowerCase() == 'info'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Kostya OS version 2.3 (c) 2020 - 2021 Konstantin Babin'
                     }
-                    else if (input.value.toLowerCase() == 'язык'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Это русская версия. Здесь есть: <a href="https://kostya-os.ru">English version</a>'
+                    else if (input.value.toLowerCase() == 'lang'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'It is English version. There is: <a href="https://kostya-os.ru/russian.html">Русская версия</a>'
                     }
-                    else if (input.value.toLowerCase() == 'куб'){
+                    else if (input.value.toLowerCase() == 'cube'){
                         dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value * input1.value)
                     }
-                    else if (input.value.toLowerCase() == 'квадрат'){
+                    else if (input.value.toLowerCase() == 'quad'){
                         dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value)
                     }
-                    else if (input.value.toLowerCase() == 'степень'){
+                    else if (input.value.toLowerCase() == 'exp'){
                         let exp = input1.value
                         for (let i = 1; i < input2.value; i++) {
                             exp = exp * input1.value
                         }
                         dosup.innerHTML = dosup.innerHTML + '<br>' + exp;    
                     }
-                    else if (input.value.toLowerCase() == 'ссылки'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' +  "Привет, я Костя, и это ссылки по которым :<br><a href='https://vk.com/kostyaos'>Моя группа ВК</a><br><a href='tel:89257929718'>My phone number</a><br><a href='mailto:holojva@gmail.com'>My Email</a>"
+                    else if (input.value.toLowerCase() == 'links'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  "Hi, I'm Kostya, it is links for connect to me:<br><a href='https://vk.com/kostavala'>My account in VK</a><br><a href='tel:89257929718'>My phone number</a><br><a href='mailto:holojva@gmail.com'>My Email</a>"
                     }
                     
-                    else if (input.value.toLowerCase() == 'калькулятор'){
+                    else if (input.value.toLowerCase() == 'math'){
                         if (input2.value == '*') {
                             dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) * Number(input3.value))
                             input.value = ''
@@ -278,14 +266,14 @@
                         }
                     }
                 
-                    else if (input.value.toLowerCase() == 'загрузиться'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Как я загружусь в браузере?! <br> Где твои мозги?!'
+                    else if (input.value.toLowerCase() == 'boot'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'How I boot in browser?! <br> Where is your brain?!'
                     }
-                    else if (input.value.toLowerCase() == 'стереть'){
+                    else if (input.value.toLowerCase() == 'clear'){
                         dosup.innerHTML = ''
                     }
                     else {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Что ты сказал?'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'What is you said?'
                         inputon = true 
                     }
                     if (inputon === false) {
