@@ -150,10 +150,10 @@
     <script>
 
         let google = document.querySelectorAll(".google")
-        let input1 = document.querySelectorAll(".input1")
-        let input2 = document.querySelectorAll(".input2")
-        let input3 = document.querySelectorAll(".input3")
-        let input4 = document.querySelectorAll(".input4")
+        let input1 = document.querySelector(".input1")
+        let input2 = document.querySelector(".input2")
+        let input3 = document.querySelector(".input3")
+        let input4 = document.querySelector(".input4")
         let calc = document.querySelectorAll(".calc")
         let esc = document.querySelector(".okoshko__header__esc")
         let text = document.querySelector(".okoshko__text")
@@ -190,7 +190,7 @@
             else if(menu.style.opacity == 0){menu.style.opacity = 1}
         }
         function math() {
-            text.innerHTML = "<input id='input1' type='text'><br><input id='input2' type='text'><br><input id='input3' type='text'><br><button class='mathb'>asdfgh</button><input id='input4' type='text'>"
+            text.innerHTML = "<input id='input1' type='text' placeholder='num'><br><input id='input2' type='text' placeholder='+-*/'><br><input id='input3' type='text' placeholder='num2'><br><button class='mathb'>Start/button><input id='input4' type='text' placeholder='ans'>"
             okno.style.opacity = 1
             vklad2("Calc")
             let mathb = document.querySelector(".mathb")
