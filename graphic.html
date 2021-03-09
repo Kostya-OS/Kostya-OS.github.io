@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коstya OS 3.0!</title>
+    <script type="text/javascript">
+       
+    </script>
+<style>
+
+     body {
+            display: flex; 
+            
+            background-image: url("kostos.jpg");
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+
+
+     }
+    .okoshko {
+         background-color: white;
+         position: absolute;
+         left: 30vw;
+         top: 27.5vh;
+         height: 45vh;
+         width: 40vw;
+      
+    }
+    .okoshko__header {
+        height: 20px;
+        width: 40vw;
+        background-color: grey;
+    }
+    .okoshko__header__start {
+        position: absolute;
+        left: 5px;
+        top: 1px;
+    }
+    .okoshko__header__esc {
+       position: absolute;
+        right: 1px ;
+        border: 1px solid black;
+        background-color: tomato;
+        color: white;
+        height: 17px;
+        width: 17px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .okoshko__text {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 40px;
+        bottom: 40px;
+        text-align: center;
+    }
+    .start {
+        position: absolute;
+        bottom: 0%;
+        height: 40px;
+        width: 100vw;
+        background-color: white;
+
+    }
+    .start__start {
+        display: flex;
+        height: 40px;
+        width: 100px;
+        background-color: red;
+        justify-content: center;
+        color: white;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        bottom: 0%;
+    }
+    .vkladka {
+        display: flex;
+        height: 40px;
+        width: 100px;
+        position: absolute;
+        left: 110px;
+        bottom: 0%;
+        background-color: grey;
+        justify-content: center;
+        color: white;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .google {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .calc {
+        position: absolute;
+        left: 50px;
+        top: 120px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .menu {
+        position: absolute;
+        bottom: 7vh;
+        left: 1vw;
+        height: 40vh;
+        width: 30vh;
+        background-color: white;
+        opacity: 0;
+    }
+</style>
+</head>
+<body>
+    <div class="mathb">Google</div>
+    <div class="google">Google</div>
+    <div class="calc" background-color="black" color="white">Calc</div>
+    <div class="okoshko">
+        <div class="okoshko__header">
+            <div class="okoshko__header__start">Kostya OS 3.0 beta 2</div>
+            <div class="okoshko__header__esc">X</div>
+        </div>
+        <div class="okoshko__text"><h1>Hello, it is Kostya OS 3.0 beta 2!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsa dolor enim! Atque, sed. Velit harum fuga tenetur sint adipisci aspernatur voluptatibus molestias aliquam, corporis neque magni aperiam ipsum excepturi?</div>
+    </div>
+    <div class="start">
+        <div class="start__start"><h4>START!</h4></div>
+        <div class="menu">
+            <div class="programs">
+                <h2>Programs</h2>
+                <div class="google" background-color="black" color="white">Google</div>
+                <div class="calc" background-color="black" color="white">Calc</div>
+            </div>
+        </div>
+        <div class="vkladka">Hello!</div>
+    </div>
+    <script>
+
+        let google = document.querySelectorAll(".google")
+        let input1 = document.querySelectorAll(".input1")
+        let input2 = document.querySelectorAll(".input2")
+        let input3 = document.querySelectorAll(".input3")
+        let input4 = document.querySelectorAll(".input4")
+        let calc = document.querySelectorAll(".calc")
+        let esc = document.querySelector(".okoshko__header__esc")
+        let text = document.querySelector(".okoshko__text")
+        let okno = document.querySelector(".okoshko")
+        let start = document.querySelector(".start__start")
+        let menu = document.querySelector(".menu")
+        let vkl =  document.querySelector(".vkladka")
+        google[0].addEventListener("click", googlef)
+        google[1].addEventListener("click", googlef)
+        calc[0].addEventListener("click", math)
+        calc[1].addEventListener("click", math)
+        
+        esc.addEventListener("click", escf)
+        start.addEventListener("click", startf)
+
+        function googlef() {
+            text.innerHTML = '<form action="https://google.com/search" method="get"><input type="text" name="q"><br><button type="submit">Найти</button></form>'
+            okno.style.opacity = 1
+            vklad2("Google")
+        }
+        function escf() {
+            okno.style.opacity = 0
+            vklad1()
+        }
+        function vklad1() {
+            vkl.style.opacity = 0
+        }
+        function vklad2(a) {
+            vkl.textContent = a
+            vkl.style.opacity = 1
+        }
+        function startf() {
+            if(menu.style.opacity == 1){menu.style.opacity = 0}
+            else if(menu.style.opacity == 0){menu.style.opacity = 1}
+        }
+        function math() {
+            text.innerHTML = "<input id='input1' type='text'><br><input id='input2' type='text'><br><input id='input3' type='text'><br><button class='mathb'>asdfgh</button><input id='input4' type='text'>"
+            okno.style.opacity = 1
+            vklad2("Calc")
+            let mathb = document.querySelector(".mathb")
+            mathb.addEventListener("click", mathf)
+        }
+        function mathf() {
+            if (input2.value == '*') {
+                input4.value = Number(input1.value) * Number(input3.value)
+            }
+            if (input2.value == '+') {
+                input4.value = Number(input1.value) + Number(input3.value)
+            }
+            if (input2.value == '-') {
+                input4.value = Number(input1.value) - Number(input3.value)
+            }
+            if (input2.value == '/') {
+                input4.value = Number(input1.value) / Number(input3.value)
+            }
+    }
+    </script>
+</body>
+</html>
