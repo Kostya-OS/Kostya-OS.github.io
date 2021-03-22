@@ -119,7 +119,7 @@
         </style>
     </head>
     <body>
-        <div id="dos"><h1>KOSTYA OS 3.1</h1><br>Type "help" to get a list of commands.</div>
+        <div id="dos"><h1>KOSTYA OS 3.0</h1><br>Type "help" to get a list of commands.</div>
         <div id="dosup"></div>
         <div id="dosdown">
             <audio id="my_audio" src="qwerty.mp3"></audio>
@@ -191,11 +191,8 @@
             }
                 function dos() {
                     if (input.value.toLowerCase() == 'help') {
-                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Сommand: edit <br> It is for: edit source code of Kostya OS <br><br>Command: grint <br> It is for: go to graрhic interface <br><br>Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br>Command: versions <br> If you dont like new versions, you can use old <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='https://kostya-os.ru'>here it is.</a>) <br><br>Command: mytime<br> It is for: Know the time<br><br><br><br><h6>boot<h6><br><br> ";
+                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Command: grint <br> It is for: go to graрhic interface Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br>Command: versions <br> If you dont like new versions, you can use old <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='https://kostya-os.ru'>here it is.</a>) Command: mytime<br> It is for: Know the time<br><br><br><br><h6>boot<h6><br><br> ";
                     input.value = ''
-                    }
-                    else if (input.value.toLowerCase() == "edit") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/edit.html">Grathic Interface</a>'
                     }
                     else if (input.value.toLowerCase() == 'createtextfile') {
                         if (hmtxt === 0) {
@@ -239,7 +236,7 @@
                     
                     }
                     else if (input.value.toLowerCase() == 'versions') {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/versions/">All versions</a>'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'I have this versions:  <a href="https://kostya-os.ru/v2_2.html">version 2.2</a> <a href="https://kostya-os.ru/v2_3.html">version 2.3</a> <a href="https://kostya-os.ru/v2_4.html">version 2.4</a> <a href="https://kostya-os.ru/v2_5.html">version 2.5</a> '
                     }
                     else if (input.value.toLowerCase() == 'deletetext'){
                         if (input1.value == namef) {
@@ -261,11 +258,11 @@
                             dosup.innerHTML = dosup.innerHTML + '<br>' + 'I dont have this text'
                         }
                     }
-                    else if (input.value.toLowerCase() == "grint") {
+                    else if (input.value == "grint") {
                         dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/graphic.html">Grathic Interface</a>'
                     }
                     else if (input.value.toLowerCase() == 'kostyaos' || input.value.toLowerCase() == 'kostya-os' || input.value.toLowerCase() == 'info'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Kostya OS version 3.1 © 2020 - 2021 Konstantin Babin'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Kostya OS version 3.0 © 2020 - 2021 Konstantin Babin'
                     }
                     else if (input.value.toLowerCase() == 'mytime'){
                         
@@ -282,7 +279,7 @@
                             dosup.innerHTML = dosup.innerHTML + '<br>' + time
                     }
                     else if (input.value.toLowerCase() == 'lang'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'It is English version. There is: <a href="https://kostya-os.ru/versions/russian.html">Русская версия(не обновляется)</a>'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'It is English version. There is: <a href="https://kostya-os.ru/russian.html">Русская версия(брошена)</a>'
                     }
                     else if (input.value.toLowerCase() == 'cube'){
                         dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value * input1.value)
