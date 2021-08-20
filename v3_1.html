@@ -25,97 +25,101 @@
             @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
         </style>
         <style>
-             body {
-            background-color: black;
-            color: white;
-            font-family: VT323;
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
+            body {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
 
-            padding: 0;
-            height: 100vh;
-        }
-        #dos {
-            background-color: black;
-            color: white;
-            font-family: VT323;
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            border: 1px solid black;
-        }
-        #dosup {
-            background-color: black;
-            color: white;
-            font-family: VT323;
-            margin: 0;
-            padding: 0;
-        }
-        input {
-            background-color: black;
-            color: white;
-            font-family: VT323;
-            border: 0ch solid black; 
-        }
-        input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: white;
-            opacity: 1; /* Firefox */
-        }
-
-        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: white;
-        }
-
-        input::-ms-input-placeholder { /* Microsoft Edge */
-            color: white;
-        }
-
-        input:focus {
-            border: 0ch solid black;
-        }
-        #dosdown {
-            background-color: black;
-            color: white;
-            font-family: VT323;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {font-size: 5em;}
-        ::-webkit-scrollbar {width: 1px;}
-        a {
-            background-color: black;
-            color: white;
-            font-family: VT323;
-            margin: 0;
-            padding: 0;
+                padding: 0;
+                height: 100vh;
             }
-        /* Track */
-        ::-webkit-scrollbar-track {
-        background: black;
-        }
+            #dos {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                border: 1px solid black;
+            }
+            #dosup {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+            }
+            input {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                cursor: url('input2.png'), auto;
+                border: 0ch solid black; 
+            }
+            input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 1; /* Firefox */
+            }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-        background: black;
-        }
+            input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: white;
+            }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-        background: black;
-        }
-        h6 {
-            font-size: 5px;
-        }
+            input::-ms-input-placeholder { /* Microsoft Edge */
+                color: white;
+            }
+
+            input:focus {
+                border: 0ch solid black;
+            }
+            #dosdown {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {font-size: 5em;}
+            ::-webkit-scrollbar {width: 1px;}
+            a {
+                background-color: black;
+                color: white;
+                font-family: VT323;
+                margin: 0;
+                padding: 0;
+                }
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: black;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: black;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: black;
+            }
+            body, #dosup, #dos, #dosdown {
+                cursor: url('qwerty.png'), auto;	
+            }
+            h6 {
+                font-size: 5px;
+            }
         </style>
     </head>
     <body>
-        <div id="dos"><h1>KOSTYA OS 3.4</h1><br>Type "help" to get a list of commands.</div>
+        <div id="dos"><h1>KOSTYA OS 3.1</h1><br>Type "help" to get a list of commands.</div>
         <div id="dosup"></div>
         <div id="dosdown">
             <audio id="my_audio" src="qwerty.mp3"></audio>
@@ -187,26 +191,11 @@
             }
                 function dos() {
                     if (input.value.toLowerCase() == 'help') {
-                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Command: browser <br> First attribute: your text of search <br> It is for: searching in Google<br><br>Сommand: desktop <br> It is for: download desktop version (I created this apps with web2desk) <br><br> Command: donut <br> It is for: motivation for developers <br><br> Command: support <br> It is for: support (yes, it's all)<br><br> Сommand: wiki <br> It is for: know more about Kostya OS<br><br>Сommand: edit <br> It is for: edit source code of Kostya OS <br><br>Command: gui <br> It is for: go to graрhic user interface <br><br>Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br>Command: versions <br> If you dont like new versions, you can use old <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='https://kostya-os.ru'>here it is.</a>) <br><br>Command: mytime<br> It is for: Know the time<br><br><br><br><h6>boot<h6><br><br> ";
+                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Сommand: edit <br> It is for: edit source code of Kostya OS <br><br>Command: grint <br> It is for: go to graрhic interface <br><br>Command: createTextFile <br> First attribute: name <br> Second attribute: text <br> It is for: creating text file <br><br> Command: seeTextFile <br>First attribute: name of file<br> It is for: look for text file <br><br>Command: links <br> It is for: connect for me <br><br> Command: deleteText <br> First attribute: name of text <br>It is for: connect for me <br><br> Command: cube <br> First attribute: number <br> It is for: put the number to cube <br><br> Command: quad <br> First attribute: number <br> It is for: put the number to quadrate <br><br> Command: exp <br> First attribute: number <br> Second attribute: exponitiation <br> It is for: put the number to exponitiation <br><br> Command: math <br> First attribute: number <br> Second attribute: +, -, *, or / <br> Third attribute: number <br> It is for: calculate <br><br> Command: clear <br> It is for: clear Kostya OS text <br><br>Command: versions <br> If you dont like new versions, you can use old <br><br> Command: kostyaos, kostya-os, info <br> It is for: Know version of OS <br><br>Command: lang <br> It is for: go to the another language (The English version is more advanced than the other languages,  <a href='https://kostya-os.ru'>here it is.</a>) <br><br>Command: mytime<br> It is for: Know the time<br><br><br><br><h6>boot<h6><br><br> ";
                     input.value = ''
                     }
-                    else if (input.value.toLowerCase() == "desktop") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'This links teleport you to disk.yandex.ru, <a href="https://disk.yandex.ru/d/BE8lHDAR-u9HJg">Windows</a>, <a href="https://disk.yandex.ru/d/CyqgTPD5dLdZ5A">macOS</a>, <a href="https://disk.yandex.ru/d/WWC1t8wH8Ps7cg">linux.</a>'
-                    }
-                    else if (input.value.toLowerCase() == "browser") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://google.com/search?q=' + input1.value + '">Search link</a>'
-                    }
-                    else if (input.value.toLowerCase() == "donut") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://vk.com/donut/kostyaos">Donut for developers</a>'
-                    }
-                    else if (input.value.toLowerCase() == "support") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://vk.com/kostyaos">Support of Kostya OS</a>'
-                    }
-                    else if (input.value.toLowerCase() == "wiki") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/wiki.html">Wiki of Kostya OS</a>'
-                    }
                     else if (input.value.toLowerCase() == "edit") {
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/edit.html">Edit page</a>'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/edit.html">Grathic Interface</a>'
                     }
                     else if (input.value.toLowerCase() == 'createtextfile') {
                         if (hmtxt === 0) {
@@ -272,11 +261,11 @@
                             dosup.innerHTML = dosup.innerHTML + '<br>' + 'I dont have this text'
                         }
                     }
-                    else if (input.value.toLowerCase() == "gui") {
+                    else if (input.value.toLowerCase() == "grint") {
                         dosup.innerHTML = dosup.innerHTML + '<br>' + '<a href="https://kostya-os.ru/graphic.html">Grathic Interface</a>'
                     }
                     else if (input.value.toLowerCase() == 'kostyaos' || input.value.toLowerCase() == 'kostya-os' || input.value.toLowerCase() == 'info'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Kostya OS version 3.4 © 2020 - 2021 Konstantin Babin'
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Kostya OS version 3.1 © 2020 - 2021 Konstantin Babin'
                     }
                     else if (input.value.toLowerCase() == 'mytime'){
                         
@@ -309,7 +298,7 @@
                         dosup.innerHTML = dosup.innerHTML + '<br>' + exp;    
                     }
                     else if (input.value.toLowerCase() == 'links'){
-                        dosup.innerHTML = dosup.innerHTML + '<br>' +  "Hi, I'm Kostya, it is links for connect to me:<br><a href='https://vk.com/kostyaos'>My account in VK</a><br><a href='tel:89257929718'>My phone number</a><br><a href='mailto:holojva@gmail.com'>My Email</a>"
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  "Hi, I'm Kostya, it is links for connect to me:<br><a href='https://vk.com/kostavala'>My account in VK</a><br><a href='tel:89257929718'>My phone number</a><br><a href='mailto:holojva@gmail.com'>My Email</a>"
                     }
                     
                     else if (input.value.toLowerCase() == 'math'){
@@ -347,7 +336,7 @@
                         dosup.innerHTML = ''
                     }
                     else {
-                        dosup.innerHTML += '<br>' + 'What is you said?' + '<br>' + input.value
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'What is you said?'
                         inputon = true 
                     }
                     if (inputon === false) {
