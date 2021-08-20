@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(70238734, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/70238734" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostya OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="MS-DOS_Application_24765.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: VT323;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+
+            padding: 0;
+            height: 100vh;
+        }
+        #dos {
+            background-color: black;
+            color: white;
+            font-family: VT323;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+        }
+        #dosup {
+            background-color: black;
+            color: white;
+            font-family: VT323;
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            background-color: black;
+            color: white;
+            font-family: VT323;
+            cursor: url('input2.png'), auto;
+            border: 0ch solid black; 
+        }
+        input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1; /* Firefox */
+        }
+
+        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: white;
+        }
+
+        input::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+        }
+
+        input:focus {
+            border: 0ch solid black;
+        }
+        #dosdown {
+            background-color: black;
+            color: white;
+            font-family: VT323;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {font-size: 5em;}
+        ::-webkit-scrollbar {width: 1px;}
+        a {
+            background-color: black;
+            color: white;
+            font-family: VT323;
+            margin: 0;
+            padding: 0;
+            }
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: black;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: black;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: black;
+        }
+        body, #dosup, #dos, #dosdown {
+            cursor: url('qwerty.png'), auto;	
+        }
+        h6 {
+            font-size: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="dos"><h1>Костина операционная система 2.5
+        </h1><br>Напишите "помощь" для получения списка команд.</div>
+        <div id="dosup"></div>
+        <div id="dosdown">
+          
+            <input id='input' type="text" placeholder="Команда">
+            <br>
+            <input id='input1' type="text" placeholder="Первый атрибут">  
+            <br>
+            <input id='input2' type="text" placeholder="Второй атрибут">  
+            <br>
+            <input id='input3' type="text" placeholder="Третий атрибут">
+        </div>
+        <script>
+            let inputon = false
+            let textik = ''
+            let dosik = document.querySelector('#dos')
+            let input = document.querySelector('#input')
+            let input1 = document.querySelector('#input1')
+            let input2 = document.querySelector('#input2')
+            let input3 = document.querySelector('#input3')
+            let dosup = document.querySelector('#dosup')
+            let dosdown = document.querySelector('#dosdown')
+            let namef = 'no name'
+            let textf = 'no text'
+            let names = 'no name'
+            let texts = 'no text'
+            let namet = 'no name'
+            let textt = 'no text'
+            let hmtxt = 0
+            let alltxtcrt = false
+            document.addEventListener("mousemove", go)
+            function go() {
+                document.getElementById("my_audio").play();
+                console.log('qwerty1')
+                setTimeout(func, 2000)
+               
+            }
+            function func() {
+                document.removeEventListener("mousemove", go);
+                console.log('qwerty2')
+            }
+            dosik.addEventListener('click', dos)
+            document.addEventListener('keydown', dos1)
+            function dos1() {
+                if (event.keyCode == 13) {dos()}
+            }
+                function dos() {
+                    if (input.value.toLowerCase() == 'помощь') {
+                    dosup.innerHTML = dosup.innerHTML + '<br>' + "Команда: создатьТекстовыйФайл <br> Первый атрибут: имя <br> Второй атрибут: текст <br> Это нужно для: создания текстового файла <br><br>Команда: версия <br> Если вам не нравится новые версии, вы можете использовать старые<br><br> Команда: увидетьТекстовыйФайл <br> Первый атрибут: имя текстового файла <br> Это нужно для: просмотра текстового файла <br><br>Команда: ссылки <br> Это нужно для: связи со мной <br><br>Команда: удалитьТекст <br> Первый атрибут: имя файла <br>Это нужно для: удаления текстового файла <br><br> Команда: куб <br> Первый атрибут: число <br> Это для: возведения числа в куб <br><br> Команда: квадрат <br> Первый атрибут: число <br> Это нужно для: возведения числа в квадрат <br><br> Команда: степень <br> Первый атрибут: число <br> Второй атрибут: степень <br> Это нужно для: увеличения числа в степень<br><br> Команда: калькулятор <br> Первый атрибут: число <br> Второй атрибут: +, -, *, или / <br> Третий атрибут: число <br> Это нужно для: подсчета <br><br> Команда: стереть <br> Это нужно для: стирания текста в Костиной ОС <br><br> Команда: костинаос, костина-ос, информация <br> Это нужно для: Узнавания версии ОС <br><br> Команда: язык <br> Это нужно для: изменения языка в ОС (Английская версия более продвинутая, <a href='https://kostya-os.ru'>Она здесь.</a>) Команда: время<br> Это нужно для: Узнавания точного времени<br><br><br><br><h6>загрузиться<h6><br><br> ";
+                    input.value = ''
+                    }
+                    else if (input.value.toLowerCase() == 'создатьтекстовыйфайл') {
+                        if (hmtxt === 0) {
+                            namef = input1.value
+                            textf = input2.value
+                            hmtxt = hmtxt + 1
+                            if (alltxtcrt === true) {
+                                hmtxt = 3
+                            }
+                        } else if (hmtxt === 1) {
+                            names = input1.value
+                            texts = input2.value
+                            hmtxt = hmtxt + 1
+                            if (alltxtcrt === true) {
+                                hmtxt = 3
+                            }
+                        } else if (hmtxt === 2) {
+                            namet = input1.value
+                            textt = input2.value
+                            hmtxt = hmtxt + 1
+                            if (alltxtcrt === true) {
+                                hmtxt = 3
+                            }
+                        } else if (hmtxt == 3){
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + 'У вас слишком много текстов. Удалите один командой "удалитьТекст" '
+                        }
+                        
+                        input.value = ''
+                        input1.value = ''
+                        input2.value = ''
+                    }
+                    else if (input.value == 'версии'){
+                            dosup.innerHTML = dosup.innerHTML + '<br>' +  "Вот все версии:  <a href='https://kostya-os.ru/v2_2.html'>версия 2.2</a> <a href='https://kostya-os.ru/v2_3.html'>версия 2.3</a> <a href='https://kostya-os.ru/v2_4.html'>версия 2.4</a> <a href='discrette.zip' download>Дискретная версия для дисков</a>"
+                        }
+                    else if (input.value.toLowerCase() == 'увидетьтекстовыйфайл'){
+                       if (input1.value == namef) {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + namef + '<br>текст: ' + textf; 
+                       }else if (input1.value == names) {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + names + '<br>текст: ' + texts; 
+                       }else if (input1.value == namet) {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'имя: ' + namet + '<br>текст: ' + textt; 
+                       }
+
+
+                    
+                    }  
+                    
+                    else if (input.value.toLowerCase() == 'удалитьтекст'){
+                        if (input1.value == namef) {
+                            namef = ''
+                            textf = ''
+                            hmtxt = 0
+                            alltxtcrt = true
+                        } else if (input1.value == names) {
+                            names = ''
+                            texts = ''
+                            hmtxt = 1
+                            alltxtcrt = true
+                        } else if (input1.value == namet) {
+                            namet = ''
+                            textt = '' 
+                            hmtxt = 2
+                            alltxtcrt = true
+                        } else {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + 'Нет такого текста'
+                        }
+                    }
+                    else if (input.value.toLowerCase() == 'костинаос' || input.value.toLowerCase() == 'костина-ос' || input.value.toLowerCase() == 'информация'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Костина ОС 2.5 (c) 2020 - 2021 Костина ОС'
+                    }
+                    else if (input.value.toLowerCase() == 'язык'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Это русская версия. Здесь есть: <a href="https://kostya-os.ru">English version</a>'
+                    }
+                    else if (input.value.toLowerCase() == 'куб'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value * input1.value)
+                    }
+                    else if (input.value.toLowerCase() == 'квадрат'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  (input1.value * input1.value)
+                    }
+                    else if (input.value.toLowerCase() == 'степень'){
+                        let exp = input1.value
+                        for (let i = 1; i < input2.value; i++) {
+                            exp = exp * input1.value
+                        }
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + exp;    
+                    }
+                    else if (input.value.toLowerCase() == 'ссылки'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' +  "Привет, я Костя, и это ссылки по которым :<br><a href='https://vk.com/kostyaos'>Моя группа ВК</a><br><a href='tel:89257929718'>My phone number</a><br><a href='mailto:holojva@gmail.com'>My Email</a>"
+                    }
+                    else if (input.value.toLowerCase() == 'время'){
+                        
+                        let date = new Date();
+                        let Year = date.getFullYear(),
+                        month = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth()+1) : (date.getMonth()+1),
+                        day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate(),
+                        hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours(),
+                        minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(),
+                        seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds(),
+                        miliseconds = date.getMilliseconds() < 10 ? '0' + date.getMilliseconds() : date.getMilliseconds();
+                        let time = day + '-'+month+'-'+Year+'  '+hours+':'+minutes+':'+seconds+'  ';
+                    
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + time
+                    }
+                    else if (input.value.toLowerCase() == 'калькулятор'){
+                        if (input2.value == '*') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) * Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                            input3.value = ''
+                        }
+                        if (input2.value == '+') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) + Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                        }
+                        if (input2.value == '-') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) - Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                        }
+                        if (input2.value == '/') {
+                            dosup.innerHTML = dosup.innerHTML + '<br>' + (Number(input1.value) / Number(input3.value))
+                            input.value = ''
+                            input1.value = ''
+                            input2.value = ''
+                        }
+                    }
+                
+                    else if (input.value.toLowerCase() == 'загрузиться'){
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Как я загружусь в браузере?! <br> Где твои мозги?!'
+                    }
+                    else if (input.value.toLowerCase() == 'стереть'){
+                        dosup.innerHTML = ''
+                    }
+                    else {
+                        dosup.innerHTML = dosup.innerHTML + '<br>' + 'Что ты сказал?'
+                        inputon = true 
+                    }
+                    if (inputon === false) {
+                        input.value = ''
+                        input1.value = ''
+                        input2.value = ''
+                        input3.value = ''   
+                    }
+                    else {
+                        inputon = false
+                    }
+                
+                }
+        </script>
+    </body>
+</html>
